@@ -312,7 +312,7 @@ $(document).ready(function () {
 
         var topoLayer = new L.TopoJSON();
 
-        $.getJSON('data/simple3.topojson')
+        $.getJSON('data/gaul_0.topojson')
             .done(addTopoData)
 
         function addTopoData(topoData) {
