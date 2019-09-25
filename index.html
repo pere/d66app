@@ -27,11 +27,11 @@
 
         .info {
             padding: 6px 8px;
-            font: 14px/16px Arial, Helvetica, sans-serif;
+
             background: white;
-            background: rgba(255, 255, 255, 0.8);
+
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+
         }
 
         .info h4 {
@@ -146,9 +146,15 @@
             padding: 0 !important;
         }
 
+
+
+
         .tabs .tab a {
             padding: 0 1px !important;
+            color: #f96369 !important;
+            font-size: 12px !important;
         }
+
 
         .active.tab {
             background-color: rgb(170, 0, 255) !important;
@@ -209,34 +215,19 @@
                         <div id="general" class="info_container col s12">
 
                             <div class="col s11 offset-s1">
-                                <h3></h3>
+                                <h3>General</h3>
                                 <div class='graph_container highcharts_general'></div>
                             </div>
 
                         </div>
                         <div id="lakes" class="info_container col s12">
                             <h3>Lakes</h3>
-
-                            <span class="adm_name">Congo</h4>
-
-                                <div class="row popup_info">
-                                    <div class="col s12">
-                                        <span class="badges">-4% </span>
-
-                                        <div>Spatial area </div>
-                                    </div>
-                                    <div class="col s12">
-                                        <span class="badges">-4% </span>
-
-                                        <div>Water quality </div>
-                                    </div>
-                                    <div class="col s12">
-                                        <span class="badges">-4% </span>
-
-                                        <div>Water quantity </div>
-                                    </div>
-
-                                </div>
+                            <div class="col s3">
+                                <div class='graph_container highcharts_lakes'></div>
+                            </div>
+                            <div class="col s3">
+                                <div class='graph_container highcharts_lakes'></div>
+                            </div>
                         </div>
                         <div id="reservoirs" class="info_container col s12">
                             <h3>Reservoirs</h3>
@@ -292,7 +283,6 @@
 
     <!-- Leaflet Styles -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <!--    <link href="./all_css/leaflet.css" rel="stylesheet" type="text/css"/> -->
 
 
     <link href="./all_css/normalize.min.css" rel="stylesheet" type="text/css" />
@@ -302,7 +292,7 @@
     integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
     crossorigin=""></script> -->
 
-    <script src="./all_js/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
 
 
     <!-- LEAFLET -->
@@ -310,6 +300,8 @@
     <script src="./all_js/highcharts.js"></script>
     <!-- <script src="./all_js/old_exporting.src.js"></script> -->
 
+    <script src="./all_js/leaflet.control.orderlayers.js"></script>
+    <script src="./all_js/Leaflet.fullscreen.js"></script>
     <script type="text/javascript" src="./all_js/bundle.min.js"></script>
 
     <script type="text/javascript" src="./all_js/materialize_last.js"></script>
