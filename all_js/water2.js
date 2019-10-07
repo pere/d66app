@@ -314,6 +314,30 @@ $(document).ready(function () {
 
         $.getJSON('data/gaul_0.topojson')
             .done(addTopoData)
+        
+          var url = 'https://geospatial.jrc.ec.europa.eu/geoserver/hotspots/wms?service=WMS';
+        var basins06 = L.tileLayer.wms(url, {
+            tileSize: 256,
+            tiled: true,
+            width: 256,
+            height: 256
+        });
+
+        basins06.setParams({
+
+            // width:null,
+            // height:null,
+            updateWhenIdle: false,
+            //  zoomOffset:-1,
+            //part of wmsParams!
+            layers: 'hybas_all_level06',
+            transparent: true,
+            format: 'image/png',
+
+            VERSION: '1.1.0',
+
+            zIndex: 33// Use zIndex to order the tileLayers within the tilePane. The higher number, the upper vertically.
+        }).addTo(map);
 
         function addTopoData(topoData) {
 
