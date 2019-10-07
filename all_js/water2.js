@@ -330,7 +330,7 @@ $(document).ready(function () {
             updateWhenIdle: false,
             //  zoomOffset:-1,
             //part of wmsParams!
-            layers: 'hybas_all_level06',
+            layers: 'hybas_all_level06_luca',
             transparent: true,
             format: 'image/png',
 
